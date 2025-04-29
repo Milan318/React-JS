@@ -11,8 +11,7 @@ function App() {
   }
 
   const handleSubmit = (e)=>{
-    e.preventDefault();
-
+    e.preventDefault();  
     setName(input)
   }
 
