@@ -64,9 +64,9 @@ function App() {
         <div className="row ">
           <div className="col-md-4 mx-auto ">
             <form method="post" onSubmit={handleSubmit}>
-              <h2>EMPLOYEE DATA</h2>
+              <h2 className="mt-4">EMPLOYEE DATA</h2>
               <div className="mb-3">
-                <label htmlFor="ename" className="form-label fw-bold">
+                <label htmlFor="ename" className="form-label fw-bold mt-2">
                   Employee Name
                 </label>
                 <input
@@ -177,7 +177,7 @@ function App() {
 
               {/* dropdown */}
               <div className="mb-3">
-                <label htmlFor="city" className="mb-3">
+                <label htmlFor="city" className="mb-3 fw-bold">
                   City
                 </label>
                 <select
@@ -207,7 +207,7 @@ function App() {
         </div>
         <div className="row">
           <div className="col-md-10 mx-auto">
-            <table className="table table-bordered mt-5 caption-top">
+            <table className="table mt-5 caption-top">
               <caption>
                 <h2 className="text-center">Data</h2>
               </caption>
@@ -217,6 +217,7 @@ function App() {
                   <th>Employee Name</th>
                   <th>Salary</th>
                   <th>Count</th>
+                  <th>Gender</th>
                   <th>City</th>
                   <th>Action</th>
                 </tr>
