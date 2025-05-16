@@ -190,9 +190,9 @@ function App() {
                   <option value="" disabled>
                     ---select-city---
                   </option>
-                  <option value="nasari">Navsari</option>
-                  <option value="surat">Surat</option>
-                  <option value="ahemdabad">Ahemdabad</option>
+                  <option value="Navsari">Navsari</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Ahemdabad">Ahemdabad</option>
                 </select>
               </div>
 
@@ -232,6 +232,7 @@ function App() {
                       <td>{salary}</td>
                       <td>{count}</td>
                       <td>{city}</td>
+                      <td></td>
                       <td>
                         <button
                           onClick={() => handleDelete(id)}
