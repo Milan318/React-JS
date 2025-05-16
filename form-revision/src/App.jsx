@@ -43,7 +43,7 @@ function App() {
                 <div className="mb-3 form-check-inline">
                   <input type="checkbox" className="form-check-input" id="count" />
                   <label className="form-check-label" htmlFor="count">Disabled</label>
-                </div>
+                </div><br />
                 <button type="submit" className="btn btn-primary">Add Data</button>
               </form>     
           </div>
