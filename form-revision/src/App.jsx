@@ -127,7 +127,7 @@ function App() {
                   </div>
 
                   <div className="form-check form-check-inline">
-                    <label className="form-check-label" htmlFor="third">
+                    <label className="form-check-label" htmlFor="Disabled">
                       Disabled
                     </label>
                     <input
