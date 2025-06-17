@@ -27,7 +27,7 @@ function Table() {
                             <td>{value.email}</td>
                             <td>{value.password}</td>
                             <td>
-                                <button className="btn btn-danger">Delete</button>
+                                <button className="btn btn-danger">Delete</button>{" "}
                                 <button className="btn btn-warning">Edit</button>
                             </td>
                         </tr>
