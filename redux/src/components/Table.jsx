@@ -1,9 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteUser } from "../features/user/userSlice";
+
 
 function Table() {
 
     const {users}=useSelector(state=>state.user);
+    const dispatch = useDispatch()
+
+    function handleDelete(id){
+      dispatch(deleteUser(id))
+    }
 
   return (
     <>
@@ -27,8 +34,8 @@ function Table() {
                             <td>{value.email}</td>
                             <td>{value.password}</td>
                             <td>
-                                <button className="btn btn-danger">Delete</button>{" "}
-                                <button className="btn btn-warning">Edit</button>
+                                <button className="btn btn-warning" onClick={()=>handleUpdate(index)}>Edit</button>{" "}
+                                <button className="btn btn-danger" onClick={()=>handleDelete(index)} >Delete</button>
                             </td>
                         </tr>
                     ))
