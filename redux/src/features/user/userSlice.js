@@ -15,7 +15,7 @@ const userSlice = createSlice({
          state.users = state.users.filter((value,index)=>index !== action.payload)
         },
         updateUser:(state,action)=>{
-         state.users 
+         state.users
         }
         
     }
