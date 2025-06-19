@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteUser } from "../features/user/userSlice";
+import { deleteUser, editUser } from "../features/user/userSlice";
 
-
-function Table() {
-
-    const {users}=useSelector(state=>state.user);
-    const dispatch = useDispatch()
-
-    function handleDelete(id){
-      dispatch(deleteUser(id))
-    }
+const Table = () => {
+  const { users } = useSelector((state) => state.user);
+  const disptach = useDispatch();
 
   return (
     <>
       <div className="container">
         <div className="row">
-          <div className="col-md-8 mx-auto mt-5">
+          <div className="col-md-6 mx-auto mt-3">
             <table className="table">
               <thead>
                 <tr>
@@ -27,19 +21,28 @@ function Table() {
                 </tr>
               </thead>
               <tbody>
-                {
-                    users.map((value,index)=>(
-                        <tr key={index}>
-                            <td>{index+1}</td>
-                            <td>{value.email}</td>
-                            <td>{value.password}</td>
-                            <td>
-                                <button className="btn btn-warning" onClick={()=>handleUpdate(index)}>Edit</button>{" "}
-                                <button className="btn btn-danger" onClick={()=>handleDelete(index)} >Delete</button>
-                            </td>
-                        </tr>
-                    ))
-                  }
+                {users.map((val, idx) => (
+                  <tr key={idx}>
+                    <td>{idx + 1}</td>
+                    <td>{val.email}</td>
+                    <td>{val.password}</td>
+                    <td>
+                      <button
+                        className="btn btn-warning me-1"
+                        onClick={()=> disptach(editUser(val.id))}
+                       >
+                        Edit
+                      </button>
+
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => disptach(deleteUser(val.id))}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -47,6 +50,6 @@ function Table() {
       </div>
     </>
   );
-}
+};
 
 export default Table;
