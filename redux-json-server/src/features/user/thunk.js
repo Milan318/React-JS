@@ -7,7 +7,7 @@ export const fetch = createAsyncThunk('fetch/product',async()=>{
 })
 
 export const createProduct = createAsyncThunk('create/product',async(product)=>{
-    let res = await axios.post("http://localhost:3000/product",product);
+    let res = await axios.post("http://localhost:3000/product",{...product,id:Date.now()});
     return res.data;
 })
 
