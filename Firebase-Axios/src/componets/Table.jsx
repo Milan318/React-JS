@@ -15,7 +15,7 @@ const Table = () => {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-md-6 mx-auto">
+          <div className="col-md-8 mx-auto mt-5">
             <table className="table">
               <thead>
                 <tr>
